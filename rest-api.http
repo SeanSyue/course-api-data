@@ -1,0 +1,79 @@
+GET http://localhost:8080/topics
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/topics
+Content-Type: application/json
+
+{
+  "id": "javascript",
+  "name": "JavaScript",
+  "description": "JavaScript Description"
+}
+
+###
+
+POST http://localhost:8080/topics
+Content-Type: application/json
+
+{
+  "id": "java",
+  "name": "Core Java",
+  "description": "Core Java Description"
+}
+
+###
+
+POST http://localhost:8080/topics
+Content-Type: application/json
+
+{
+  "id": "javaee",
+  "name": "Enterprise Java",
+  "description": "Enterprise Java Description"
+}
+
+###
+
+GET http://localhost:8080/topics/javaee
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+DELETE http://localhost:8080/topics/javaee
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/topics/java/courses
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/topics/java/courses
+Content-Type: application/json
+
+{"id": "java-streams",
+  "name": "Core Streams",
+  "description": "Core Streams Description"
+}
+
+###
+
+# See comments in https://www.youtube.com/watch?v=ojc_Jy_0EgI
+GET http://localhost:8080/actuator/health
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
+
+# See comments in https://www.youtube.com/watch?v=ojc_Jy_0EgI
+GET http://localhost:8080/actuator/beans
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
